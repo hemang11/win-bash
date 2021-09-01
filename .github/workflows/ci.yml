@@ -24,7 +24,7 @@ jobs:  # only 1 job is running
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm install # installs all the dependencies ( clean-install)
-        run: npm ci 
+      run: npm ci 
   
   # publish: 
   #   needs: test => to run the publish job the test job should execute first , each job is assigned differet servers
