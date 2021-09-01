@@ -12,5 +12,3 @@ jobs:  # only 1 job is running
           node-version: 12
       - name: npm install # installs all the dependencies ( clean-install)
         run: npm ci 
-      - name: npm test
-        run: npm test
