@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "npm package to run linux commands",
   "main": "index.js",
+  "bin":{
+    "wnb":"./bin/win-bash.js"
+  },
   "scripts": {
     "test": "jest"
   },
