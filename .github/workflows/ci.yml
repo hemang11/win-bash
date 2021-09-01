@@ -1,0 +1,16 @@
+name: CI # Name of the workflow
+
+on: [push, pull_request]  # event triggered on push/pull request 
+
+jobs:  # only 1 job is running
+  test: # job name
+    runs-on: ubuntu-latest  # job running on ubuntu
+    steps: # bring source code into ubuntu machine / cwd
+      - uses: actions/checkout@v2 # already built action
+      - uses: actions/setup-node@v1 # setup nodejs V1
+        with:
+          node-version: 12
+      - name: npm install # installs all the dependencies ( clean-install)
+        run: npm ci 
+      - name: npm test
+        run: npm test
