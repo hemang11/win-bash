@@ -26,7 +26,7 @@ jobs:  # only 1 job is running
     - name: npm install # installs all the dependencies ( clean-install)
       run: npm ci 
     - name: npm test # unit testing using jest lib in js
-      run npm test
+      run: npm test
   
   # publish: 
   #   needs: test => to run the publish job the test job should execute first , each job is assigned differet servers
