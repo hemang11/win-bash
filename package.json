@@ -1,6 +1,6 @@
 {
   "name": "win-bash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "npm package to run linux commands",
   "main": "index.js",
   "bin":{
