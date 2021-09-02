@@ -15,8 +15,8 @@ jobs:  # only 1 job is running
     strategy:
       fail-fast: false
       matrix:
-        node-version: [12.x, 14.x, 15.x, 16.x]
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [12.x] # can be [12.x, 14.x, 15.x, 16.x]
+        os: [ubuntu-latest]  # can be [ubuntu-latest, windows-latest, macos-latest]
 
     steps: # bring source code into ubuntu machine / cwd
     - uses: actions/checkout@v2 # checkout to the current branch
@@ -25,6 +25,8 @@ jobs:  # only 1 job is running
         node-version: ${{ matrix.node-version }}
     - name: npm install # installs all the dependencies ( clean-install)
       run: npm ci 
+    - name: npm test # unit testing using jest lib in js
+      run: npm test
   
   # publish: 
   #   needs: test => to run the publish job the test job should execute first , each job is assigned differet servers

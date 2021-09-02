@@ -1,1 +1,3 @@
-console.log('hmm changes made to the source code');
+module.exports.sum = (a,b)=>{
+    return a+b;
+}
